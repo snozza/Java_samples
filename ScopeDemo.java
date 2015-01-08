@@ -14,3 +14,4 @@ class ScopeDemo {
     System.out.println("x is " + x);
   }
 }
+

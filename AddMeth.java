@@ -3,6 +3,12 @@ class Vehicle {
   int fuelcap;
   int mpg;
 
+  Vehicle(int p, int f, int m) {
+    passengers = p;
+    fuelcap = f;
+    mpg = m;
+  }
+
   int range() {
     return fuelcap * mpg;
   }
@@ -10,18 +16,10 @@ class Vehicle {
 
 class AddMeth {
   public static void main(String args[]) {
-    Vehicle minivan = new Vehicle();
-    Vehicle sportscar = new Vehicle();
+    Vehicle minivan = new Vehicle(7, 16, 21);
+    Vehicle sportscar = new Vehicle(8, 9, 10);
 
     int range1, range2;
-
-    minivan.passengers = 7;
-    minivan.fuelcap = 16;
-    minivan.mpg = 21;
-
-    sportscar.passengers = 2;
-    sportscar.fuelcap = 14;
-    sportscar.mpg = 12;
 
     System.out.print("Minivan can carry " + minivan.passengers + 
                      ". ");

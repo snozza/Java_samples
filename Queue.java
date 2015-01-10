@@ -1,6 +1,6 @@
 class Queue {
-  char q[];
-  int putloc, getloc;
+  private char q[];
+  private int putloc, getloc;
 
   Queue(int size) {
     q = new char[size];

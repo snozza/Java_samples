@@ -1,2 +1,4 @@
 # Java_samples
-Practice Java
+Java sample programs, design patterns and simple algorithms.
+
+Purely for learning Java syntax.

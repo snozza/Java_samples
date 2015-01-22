@@ -1,3 +1,5 @@
+package series;
+
 public interface Series {
   int getNext();
   void reset();

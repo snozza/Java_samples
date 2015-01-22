@@ -1,4 +1,4 @@
-import Series.*
+package series;
 
 class ByTwos implements Series {
   int start;

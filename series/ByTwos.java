@@ -3,6 +3,7 @@ package series;
 class ByTwos implements Series {
   int start;
   int val;
+  int prev;
 
   ByTwos() {
     start = 0;

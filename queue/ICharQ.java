@@ -2,8 +2,8 @@ package queue;
 
 public interface ICharQ {
   
-  void put(char ch);
+  void put(char ch) throws QueueFullException;
 
-  char get();
+  char get() throws QueueEmptyException;
 
 }

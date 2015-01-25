@@ -9,6 +9,7 @@ class ReadBytes {
       System.in.read(data);
       System.out.print("You entered: ");
       for(int i=0; i < data.length; i++)
-        System.out.print(data[i]);
+        System.out.print((char) data[i]);
+      System.out.println();
   }
 }

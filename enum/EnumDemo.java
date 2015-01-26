@@ -1,38 +1,34 @@
-enum Transport {
-  CAR,TRUCK, AIRPLANE, TRAIN, BOAT
+import java.util.*;
+
+class HtmlParse {
+
+  List<String> listItems = new ArrayList<String>();
+
+  public List<String> htmlBeverage(String html) {
+
+    int start = 0;
+    String beverage;
+
+    while (true) {
+      int openP = html.indexOf("beverages");
+      int closeP = html.indexOf("</o>", openP);
+      int openLi = html.indexOf("<li>", start);
+      if(openLi == -1 | openLi > closeP) break;
+      int closeLi = html.indexOf("</li>", start+1);
+
+      start = closeLi;
+
+      beverage = html.substring(openLi+4, closeLi);
+      listItems.add(beverage);
+    }
+    return listItems;
+  }
 }
 
-class EnumDemo {
-  public static void main(String args[])
-  {
-    Transport tp;
-
-    tp = Transport.AIRPLANE;
-
-    System.out.println("Value of tp: " + tp);
-    System.out.println();
-
-    tp = Transport.TRAIN;
-
-    if(tp == Transport.TRAIN)
-      System.out.println("tp contains TRAIN.\n");
-
-    switch(tp) {
-      case CAR:
-        System.out.println("A car carries people.");
-        break;
-      case TRUCK:
-        System.out.println("A Truck carries freight.");
-        break;
-      case AIRPLANE:
-        System.out.println("An airplane flies.");
-        break;
-      case TRAIN:
-        System.out.println("A train runs on rails.");
-        break;
-      case BOAT:
-        System.out.println("A boat sails on water.");
-        break;
-    }
+class TestParse {
+  public static void main(String args[]) {
+    HtmlParse example = new HtmlParse();
+    example.htmlBeverage("beverages<li>Andrew/Wendy/Mike</li>" + 
+                          "<li>Coke</li></o>");
   }
 }
